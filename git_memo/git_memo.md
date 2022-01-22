@@ -11,8 +11,7 @@
 * [githubマークダウン書式](#aMarkdownFormat)
 
 
-<a name="aGitCommand"></a>
-# gitコマンド
+# gitコマンド <a name="aGitCommand"></a>
 
 ### ローカルリポジトリのステータスを確認する
 ```
@@ -113,8 +112,8 @@ $ git push origin [タグ名]
 ```
 
 
-<a id="aGitControl"></a>
-# git操作応用
+
+# git操作応用 <a id="aGitControl"></a>
 
 ## リポジトリの作成
 ```
@@ -315,8 +314,8 @@ $ git branch           //ブランチの一覧を表示する
 
 
 
-<a id="aLabels"></a>
-# gitのラベル運用
+
+# gitのラベル運用 <a id="aLabels"></a>
 githubのデフォルトのラベルの意味。  
 
 | Label | 説明 |
@@ -334,8 +333,8 @@ githubのデフォルトのラベルの意味。
 
 
 
-<a id="aMarkdownFormat"></a>
-# githubマークダウン書式（確認）
+
+# githubマークダウン書式（確認） <a id="aMarkdownFormat"></a>
 
 **＜見出し＞**  
 
@@ -604,7 +603,9 @@ $ git branch           //ブランチの一覧を表示する
 
 
 ***
-::Project= Web Operation Document  
+[トップへ戻る](/readme.md)  
+  
+::Project= Skill Document  
 ::Admin= Korei (@korei-xlix)  
 ::github= https://github.com/korei-xlix/  
 ::Homepage= https://koreixlix.wixsite.com/profile  

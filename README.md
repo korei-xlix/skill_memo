@@ -16,6 +16,8 @@
 * [githubマークダウン書式（確認）](#iMarkdownFormat)
 
 
+
+
 # 本リポジトリの規約 <a name="aRules"></a>
 * 素材の改造、流用、配布について。  
   このリポジトリ配下のソースの改造、改造物の配布、クローンは禁止とします。  
@@ -35,7 +37,7 @@
 
 
 ***
-::Project= Web Operation Document  
+::Project= Skill Document  
 ::Admin= Korei (@korei-xlix)  
 ::github= https://github.com/korei-xlix/  
 ::Homepage= https://koreixlix.wixsite.com/profile  

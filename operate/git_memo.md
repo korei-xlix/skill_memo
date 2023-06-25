@@ -27,14 +27,17 @@
 
 <h1 id="aGitCommand">gitコマンド</h1>  
 
-### ローカルリポジトリのステータスを確認する
-```
-$ git status
-```
+## ローカルリポジトリのステータスを確認する
 
+```text
+> git status
 
-### gitから最新のリポジトリを取得する
 ```
+  
+
+## gitから最新のリポジトリを取得する
+
+```text
 $ git fetch
 $ git pull
 
@@ -42,86 +45,102 @@ $ git pull
 $ git fetch --tags
 $ git pull
 ```
+  
 
+## ブランチを切り替える
 
-### ブランチを切り替える
-```
-$ git checkout [ブランチ名]
-```
+```text
+> git checkout [ブランチ名]
 
-
-### ブランチの操作
-```
-現在のブランチを表示する
-$ git branch
-
-ブランチを消す
-$ git branch -d [ブランチ名]
-```
-
-
-### リポジトリのdiff
-ローカルリポジトリとリモートリポジトリの変更差分を表示する。
-```
-$ git diff
-
-$ git diff > ..\diff.txt
-　テキストファイルに書き込む。
-```
-
-
-### ローカルリポジトリのファイル操作
-```
-ファイルの追加
-$ git add [ファイル名]
-
-ファイルの削除
-$ git rm [ファイル名]
-
-ファイル名変更
-$ git mv [変更元ファイル名] [変更先ファイル名]
-```
-
-
-### リモートが自分のリポジトリかを確認する。
-```
-$ git remote -v
-origin  https://github.com/[自分のリポジトリ名].git (fetch)
-origin  https://github.com/[自分のリポジトリ名].git (push)
 ```
   
 
-### ローカルの変更操作
+## ブランチの操作
+
+```text
+現在のブランチを表示する
+> git branch
+
+ブランチを消す
+> git branch -d [ブランチ名]
+
 ```
+  
+
+## リポジトリのdiff
+
+ローカルリポジトリとリモートリポジトリの変更差分を表示する。
+
+```text
+> git diff
+
+> git diff > ..\diff.txt
+　テキストファイルに書き込む。
+```
+  
+
+## ローカルリポジトリのファイル操作
+
+```text
+ファイルの追加
+> git add [ファイル名]
+
+ファイルの削除
+> git rm [ファイル名]
+
+ファイル名変更
+> git mv [変更元ファイル名] [変更先ファイル名]
+
+```
+  
+
+## リモートが自分のリポジトリかを確認する
+
+```text
+> git remote -v
+origin  https://github.com/[自分のリポジトリ名].git (fetch)
+origin  https://github.com/[自分のリポジトリ名].git (push)
+
+```
+  
+
+## ローカルの変更操作
+
+```text
 ローカルの変更内容を退避する。
-$ git stash save
+> git stash save
 
 stashで退避した内容を現在のブランチに戻す。
-$ git stash pop
-```
+> git stash pop
 
-
-### コミットする
 ```
+  
+
+## コミットする
+
+```text
 エディタが開かれるのでコメントを書く。
-$ git commit -a
-$ git push origin [ブランチ名]
+> git commit -a
+> git push origin [ブランチ名]
 　pushでgitに送信される。originはリモート（gitそのものを示す）。
-```
 
-
-### コミットの確認
 ```
-$ git log -n 3
+  
+
+## コミットの確認
+
+```text
+> git log -n 3
 　最新から10件まで取得される
 ```
   
 
-### コミットにタグを付ける
-```
-$ git tag -a "[タグ名]"
+## コミットにタグを付ける
+
+```text
+> git tag -a "[タグ名]"
 　タグ名はダブルクォーテーションで囲むこと。
-$ git push origin [タグ名]
+> git push origin [タグ名]
 　pushでgitに送信される。originはリモート（gitそのものを示す）。
 ```
   
@@ -133,19 +152,30 @@ $ git push origin [タグ名]
 <h1 id="aGitControl">git操作応用</h1>  
 
 ## リポジトリの作成
+
+## gitを使いはじめる
+
+```text
+> git init [フォルダ名]  ※以下に.gitを作成する
+> cd [フォルダ]
+
 ```
-gitを使いはじめる
-$ git init [フォルダ名]  ※以下に.gitを作成する
-$ cd [フォルダ]
+  
+## ファイルの追加
 
-ファイルの追加
-$ git add *.*
+```text
+> git add *.*
 
-最初のcommit
-$ git commit -a
+```
+  
+
+## 最初のcommit
+
+```text
+> git commit -a
 
 コメントを入力後、masterブランチが自動で作成されるので確認する
-$ git branch
+> git branch
 * master
   
 1.github側でリポジトリを作成する。
@@ -160,22 +190,23 @@ $ git branch
   
 6.トークンをコピーしたものでサインインする。  
   
-$ git remote -v
-$ git remote rm origin
-$ git remote add origin git@github.com:[githubの自リポジトリ名]
-$ git remote -v
-$ git push -u origin master
+> git remote -v
+> git remote rm origin
+> git remote add origin git@github.com:[githubの自リポジトリ名]
+> git remote -v
+> git push -u origin master
 
 で、トークンを入力する。
-$ git status
+> git status
 
 ```
-
+  
 
 
 ## 既存リポジトリのクローンを設置
-```
-git clone [リポジトリパス]
+
+```text
+> git clone [リポジトリパス]
 
 カレントに展開する場合、最後に . を入れる
 git clone [リポジトリパス] .  
@@ -183,40 +214,36 @@ git clone [リポジトリパス] .
 ```
   
 
-
 ## githubへのpush（タグ管理）
 
+```text
 1.ブランチを切り替える場合
-```
-$ git branch
+
+> git branch
 (現在のブランチ表示)
 
-$ git branch [新しいブランチ名]
-$ git checkout [ブランチ名]
+> git branch [新しいブランチ名]
+> git checkout [ブランチ名]
 (切り替え先のブランチ表示)
-```
   
 
 2.ローカルリポジトリの状態確認
-```
-$ git remote -v
-$ git branch
-$ git status
-$ git diff
-```
+
+> git remote -v
+> git branch
+> git status
+> git diff
   
 
 3.ファイルの追加、変更、削除をする
-```
 ファイルの追加
-$ git add [ファイル名]
+> git add [ファイル名]
 
 ファイルの削除
-$ git rm [ファイル名]
+> git rm [ファイル名]
 
 ファイル名変更
-$ git mv [変更元ファイル名] [変更先ファイル名]
-```
+> git mv [変更元ファイル名] [変更先ファイル名]
 この操作をしたあとコミットしないと、当然masterには反映されない  
   
 
@@ -224,36 +251,33 @@ $ git mv [変更元ファイル名] [変更先ファイル名]
   
 
 5.コミットする  
-```
-$ git commit -a -m "(コメント)"
-$ git push origin [ブランチ名]
-```
+> git commit -a -m "(コメント)"
+> git push origin [ブランチ名]
   
 
 6.タグをつける
-```
-$ git log -n 3
-$ git tag
-$ git tag -a [タグ] -m "(コメント)" [コミット名]
-$ git push origin [タグ]
-```
+> git log -n 3
+> git tag
+> git tag -a [タグ] -m "(コメント)" [コミット名]
+> git push origin [タグ]
 タグはリモートは削除できない仕様。  
 運用ではタグ消しはしないようにする。  
 
+```
+  
 
 ## Pull Request手順（単独開発では不要？）
 
+```text
 1.普通にローカルを編集、コミットする  
   [作業用ブランチ名]
   
 
 2.リモートの変更を取り込む
-```
-$ git fetch
-$ git rebase [masterリポジトリ名]
+> git fetch
+> git rebase [masterリポジトリ名]
   
 ここで競合した場合は再編集してpushすること
-```
   
 
 3.githubのwebページ上でpull requestを作成する。  
@@ -266,41 +290,37 @@ $ git rebase [masterリポジトリ名]
   
 
 4.ローカルのmasterを更新する。  
-```
-$ git fetch
-$ git checkout [masterブランチ名]
-$ git pull
-```
+> git fetch
+> git checkout [masterブランチ名]
+> git pull
 
+```
+  
 
 ## コミットを取り消す
 
+```text
 1.コミットの番号を取得する。
-```
-$ git log -n 3
-```
-  
+> git log -n 3
 
 2.revertする
-```
-$ git revert [コミット番号]
-```
-  
+> git revert [コミット番号]
 
 3.vimが開くのでリバートの理由を入力する  
   空だとリバートできない。  
-  
 
 4.ブランチに反映する
-```
-$ git push origin [作業用ブランチ名]
-```
+> git push origin [作業用ブランチ名]
 
+```
+  
 
 ## githubへのサインイン（初回のみ？）
+
 push時にgithubへのサインインが求められることがある。  
 その場合、アクセストークンを作ることでサインインできる。  
-  
+
+```text
 1.githubにログインする。  
   
 2.setting→deveroper setting→Personal access tokensにアクセス。  
@@ -313,34 +333,39 @@ push時にgithubへのサインインが求められることがある。
   
 6.トークンをコピーしたものでサインインする。  
 
+```
+  
 
 ## cloneしたリモートを元に戻す
-```
-$ git remote -v
-$ git remote rm origin
-$ git remote add origin git@github.com:[githubの自リポジトリ名]
-$ git remote -v
-```
 
+```text
+> git remote -v
+> git remote rm origin
+> git remote add origin git@github.com:[githubの自リポジトリ名]
+> git remote -v
+```
+  
 
 ## リポジトリの更新操作
-```
-$ git fetch --tags origin
-$ git merge [自ブランチ名]  ※いるのか？？？
+
+```text
+> git fetch --tags origin
+> git merge [自ブランチ名]  ※いるのか？？？
 
 2.gitから最新のリポジトリを引っ張り、タグを表示する。
-$ git fetch --tags
+> git fetch --tags
 
 3.ローカルを退避して、ブランチを切り替えたあと、退避を戻す。
 提供されている最新バージョンがv1.6.1として、
 v1.6.0からv1.6.1へのバージョンアップを行う仮定で手順を記載。
-$ git status           //ローカルリポジトリの内容を確認する
-$ git stash save       //変更を一時退避する
-$ git checkout v1.6.1  //ブランチをv1.6.1に切り替える
-$ git stash pop        //退避を戻して、退避を消す
-$ git branch           //ブランチの一覧を表示する
-```
+> git status           //ローカルリポジトリの内容を確認する
+> git stash save       //変更を一時退避する
+> git checkout v1.6.1  //ブランチをv1.6.1に切り替える
+> git stash pop        //退避を戻して、退避を消す
+> git branch           //ブランチの一覧を表示する
 
+```
+  
 
 
 
@@ -367,15 +392,16 @@ githubのデフォルトのラベルの意味。
 
 <h1 id="aMarkdownFormat">githubマークダウン書式（確認）</h1>  
 
-**＜見出し＞**  
+## ＜見出し＞
 
+```text
 # 見出し1
 ## 見出し2
 ### 見出し3
 #### 見出し4
 ##### 見出し5
 ###### 見出し6
-  
+```
   
 
 **＜Block 段落＞**  
@@ -385,12 +411,11 @@ githubのデフォルトのラベルの意味。
   
 段落2
   
-```
+```text
 段落1
 (空行)
 段落2
 ```
-  
   
 
 **＜Br 改行＞**  
@@ -400,12 +425,11 @@ hoge fuga
 (↑↑↑スペース2つ↑↑↑)  
 piyo
   
-```
+```text
 hoge fuga  
 (↑↑↑スペース2つ↑↑↑)  
 piyo
 ```
-  
   
 
 **＜Blockquotes 引用＞**  
@@ -415,23 +439,21 @@ piyo
 > 引用
 >> 多重引用
   
-```
+```text
 > 引用
 > 引用
 >> 多重引用
 ```
   
-  
 
 **＜Code コード＞**  
 `バッククオート` 3つ、あるいはダッシュ~３つで囲む  
   
-```
+```text
 
 code's
 
 ```
-  
   
 
 **＜インラインコード＞**  
@@ -443,26 +465,27 @@ code's
 
 **＜pre 整形済みテキスト＞**  
 半角スペース4個もしくはタブで、コードブロックをpre表示  
-  
+
+```text
     class Hoge
         def hoge
             print 'hoge'
         end
     end
   
-```
     class Hoge
         def hoge
             print 'hoge'
         end
     end
+
 ```
-  
   
 
 **＜Hr 水平線＞**  
 アンダースコア_ 、アスタリスク*、ハイフン-などを3つ以上連続して記述  
-  
+
+```text
 hoge
 ***
 hoge
@@ -470,7 +493,7 @@ ___
 hoge
 ---
   
-```
+\```
 hoge
 ***
 hoge
@@ -478,60 +501,62 @@ ___
 hoge
 ---
 ```
-  
   
 
 **＜Ul 箇条書きリスト＞**  
 ハイフン-、プラス+、アスタリスク*のいずれかを先頭に記述  
 ネストはタブで表現  
-  
-- リスト1
-	- リスト1_1
-		- リスト1_1_1
-		- リスト1_1_2
-	- リスト1_2
-- リスト2
-- リスト3
-  
-```
-- リスト1
-    - リスト1_1
-        - リスト1_1_1
-        - リスト1_1_2
-    - リスト1_2
-- リスト2
-- リスト3
+
+```text
+* リスト1
+  * リスト1_1
+    * リスト1_1_1
+    * リスト1_1_2
+  * リスト1_2
+* リスト2
+* リスト3
+
 ```
   
+
+* リスト1
+  * リスト1_1
+    * リスト1_1_1
+    * リスト1_1_2
+  * リスト1_2
+* リスト2
+* リスト3
   
 
 **＜Ol 番号付きリスト＞**  
 番号.を先頭に記述  
 ネストはタブで表現  
-  
-1. 番号付きリスト1
-	1. 番号付きリスト1-1
-	1. 番号付きリスト1-2
-1. 番号付きリスト2
-1. 番号付きリスト3
-  
+
+```text
+1 番号付きリスト1
+  1 番号付きリスト1-1
+  1 番号付きリスト1-2
+1 番号付きリスト2
+1 番号付きリスト3
+
 ```
+  
+
 1. 番号付きリスト1
     1. 番号付きリスト1-1
     1. 番号付きリスト1-2
 1. 番号付きリスト2
 1. 番号付きリスト3
-```
   
-  
+
 
 **＜強調＞**  
 アスタリスク*もしくはアンダースコア_1個で文字列を囲む  
   
 これは *イタリック* です  
-これは _イタリック_ です  
+これは \_イタリック\_ です  
   
-```
+```text
 これは *イタリック* です
 これは _イタリック_ です
 ```
@@ -539,23 +564,23 @@ hoge
 アスタリスク*もしくはアンダースコア_2個で文字列を囲む  
   
 これは **ボールド** です  
-これは __ボールド__ です  
+これは \_\_ボールド\_\_ です  
   
-```
+```text
 これは **ボールド** です
 これは __ボールド__ です
 ```
+  
 
 アスタリスク*もしくはアンダースコア_3個で文字列を囲む  
   
 これは ***イタリック＆ボールド*** です  
-これは ___イタリック＆ボールド___ です  
+これは \_\_\_イタリック＆ボールド\_\_\_ です  
   
-```
+```text
 これは ***イタリック＆ボールド*** です
 これは ___イタリック＆ボールド___ です
 ```
-  
   
 
 **＜Link リンク＞**  
@@ -563,10 +588,9 @@ hoge
   
 [Google](https://www.google.co.jp/)
   
-```
+```text
 [Google](https://www.google.co.jp/)
 ```
-  
   
 
 **＜外部参照リンク＞**  
@@ -575,32 +599,30 @@ URLが長くて読みづらくなる場合や同じリンクを何度も使用�
 [yahoo]: http://www.yahoo.co.jp "yahoo desu"
 [yahoo japan][yahoo]
   
-```
+```text
 [yahoo]: http://www.yahoo.co.jp
 [yahoo japan][yahoo]
 ```
-  
   
 
 **＜Images 画像＞**  
 先頭の!で画像のと認識  
 画像の大きさなどの指定をする場合はimgタグを使用  
   
-```
+```text
 ![alt](画像URL)
 ![代替文字列](URL "タイトル")
 ```
   
-  
 
-**＜Table 表＞**  
+## ＜Table 表＞**  
   
 | TH1 | TH2 |
 ----|---- 
 | TD1 | TD3 |
 | TD2 | TD4 |
   
-```
+```text
 | TH1 | TH2 |
 ----|---- 
 | TD1 | TD3 |
@@ -615,21 +637,21 @@ URLが長くて読みづらくなる場合や同じリンクを何度も使用�
 
 <h1 id="aUpdate">リポジトリのアップデート</h1>  
 
-```
-$ git fetch --tags origin
-$ git merge [自ブランチ名]  ※いるのか？？？
+```text
+> git fetch --tags origin
+> git merge [自ブランチ名]  ※いるのか？？？
 
 2.gitから最新のリポジトリを引っ張り、タグを表示する。
-$ git fetch --tags
+> git fetch --tags
 
 3.ローカルを退避して、ブランチを切り替えたあと、退避を戻す。
 提供されている最新バージョンがv1.6.1として、
 v1.6.0からv1.6.1へのバージョンアップを行う仮定で手順を記載。
-$ git status           //ローカルリポジトリの内容を確認する
-$ git stash save       //変更を一時退避する
-$ git checkout v1.6.1  //ブランチをv1.6.1に切り替える
-$ git stash pop        //退避を戻して、退避を消す
-$ git branch           //ブランチの一覧を表示する
+> git status           //ローカルリポジトリの内容を確認する
+> git stash save       //変更を一時退避する
+> git checkout v1.6.1  //ブランチをv1.6.1に切り替える
+> git stash pop        //退避を戻して、退避を消す
+> git branch           //ブランチの一覧を表示する
 
 ```
   
@@ -643,6 +665,6 @@ $ git branch           //ブランチの一覧を表示する
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

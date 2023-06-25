@@ -18,13 +18,13 @@
 
 
 
-<h1 id="aMokuji">nkf network kanji</h1>  
+<h1 id="ankf">nkf network kanji</h1>  
 nkf network kanjiはBase64のエンコードをおこなう変換モジュールです。  
   
   **参考**  
     [nkf network kanji（Homepage）](https://ja.osdn.net/projects/nkf/releases/)  
   
-```
+```text
 make
 make install
 
@@ -56,6 +56,6 @@ $ locale
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

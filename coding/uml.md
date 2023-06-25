@@ -18,13 +18,13 @@ Plank UMLの記述にご利用ください。
 * [VS Codeのおすすめ拡張](#aVSExtention)
 
 * 【シーケンス図】
-	* [基本書式](#aSeq1)
-	* [分類子の宣言](#aSeq2)
-	* [シーケンス線の書式](#aSeq3)
-	* [応答メッセージを矢印の下に表示する](#aSeq4)
-	* [自動番号振り](#aSeq5)
-	* [条件分岐](#aSeq6)
-	* [テキストボックス](#aSeq7)
+  * [基本書式](#aSeq1)
+  * [分類子の宣言](#aSeq2)
+  * [シーケンス線の書式](#aSeq3)
+  * [応答メッセージを矢印の下に表示する](#aSeq4)
+  * [自動番号振り](#aSeq5)
+  * [条件分岐](#aSeq6)
+  * [テキストボックス](#aSeq7)
 
 * [クラス図](#aClass)
 
@@ -45,7 +45,7 @@ VS CodeからPlank UMLのJavaを起動します。
 * 1.VS Codeをダウンロード、インストールします。  
   VS Codeは誰でもmicrosoftから無料で利用できます。  
   
-  [VS Code])(https://azure.microsoft.com/ja-jp/products/visual-studio-code)  
+  [VS Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code)  
   
 
 * 2.左のバー「Extention」、左上の窓で「Japanese Language Pack」で日本語パッケージを検索します。  
@@ -63,34 +63,38 @@ VS CodeからPlank UMLのJavaを起動します。
 * 4.Java Deveropment Kitがインストールされているか確認します。  
   Java 8か16でも動作します。  
   
-  確認するには、コマンドプロンプト（スタートメニューの右クリック-> コマンドプロンプト）で以下を実行します。  
-```
+確認するには、コマンドプロンプト（スタートメニューの右クリック-> コマンドプロンプト）で以下を実行します。  
+
+```text
 > java -version
 
 java version "16.0.1" 2021-04-20
 Java(TM) SE Runtime Environment (build 16.0.1+9-24)
 Java HotSpot(TM) 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ※バージョンが表示されていれば OKです
+
 ```
 
-### **Java Devがインストールされていなかった場合...**  
-  Java Deveropment Kitがインストールされていなければセットアップします。  
-  Java Deveropment Kitは誰でもOracleから無料で利用できます。  
-  
-  [Java Deveropment Kit])(https://www.oracle.com/jp/java/technologies/downloads/)  
-  
-  Windowsの場合、「Windows」の「x64 Installer」とかでいけると思います。  
+> **Java Devがインストールされていなかった場合...**  
+> Java Deveropment Kitがインストールされていなければセットアップします。  
+> Java Deveropment Kitは誰でもOracleから無料で利用できます。  
+>  
+> [[Java Deveropment Kit]](https://www.oracle.com/jp/java/technologies/downloads/)  
+>  
+> Windowsの場合、「Windows」の「x64 Installer」とかでいけると思います。  
   
 
 * 5.記述したコードをPlant UMLで表示するには、「Alt」+「D」でプレビュー表示できます。  
   
 * 6.ワークスペースの設定もしておくといいです。  
   左下の「設定」-「設定」の「ワークスペース」で、検索窓を指定。  
-
+  
   editor.mouseWheelZoom：ON　「Ctrl」+マウスホイールで文字の大きさが変更できる。  
-
+  
   editor.renderWhitespace：all　半角スペースを可視化できる。  
-
+  
+  Editor: Font Family：MS Gothic  等幅フォントを設定できる。  
+  
 
 
 
@@ -117,8 +121,9 @@ Java HotSpot(TM) 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
   「ファイル」-「設定」-「ショートカット」で、「extension.toggleWhitespacePlus」  
   
   コマンドパレットで「Whitespace+ Config」を実行する。  
-  
-```
+
+
+```text
 autostart：ON　起動時自動実行  
 
 "dark": {
@@ -136,8 +141,9 @@ autostart：ON　起動時自動実行
   カラーピッカーを表示する。  
   が、言語を有効にする必要がある。  
   
-  「ユーザ」-「拡張機能」-「vscode-color-picker」でsetting.jsonで編集。  
-```
+「ユーザ」-「拡張機能」-「vscode-color-picker」でsetting.jsonで編集。  
+  
+```text
 {
     "editor.renderWhitespace": "all",
     "vscode-color-picker.languages": [
@@ -158,10 +164,28 @@ https://code.visualstudio.com/docs/languages/identifiers
 ```
   
 
+* **markdownlint**  
+  markdownの書式チェックをし統一性をもたせる。  
+  setting.jsonから任意の警告を消すこともできる。  
+  「設定」で「markdownlint」を検索し、setting.jsonを編集。  
+  
+```text
+    "editor.useTabStops": false,
+    "markdownlint.config": {
+        
+        "MD012": false,
+        "MD033": false
+    }
+
+```
+  
+
+
 
 
 
 <h1 id="aSeq1">シーケンス / 基本書式</h1>  
+
 * 基本ドキュメント
 * ヘッダー+フッター
 * 類分子+グループ化
@@ -171,7 +195,7 @@ https://code.visualstudio.com/docs/languages/identifiers
 * ページ区切り
   
 
-```
+```text
 @startuml practice1
 
 '################################
@@ -236,12 +260,13 @@ Foo1 <- Foo2 : Ack(OK) 3
 
 
 <h1 id="aSeq2">シーケンス / 分類子の宣言</h1>  
+
 * 分類子
 * 分類子+カラー
 * 分類子+改行や複数行
   
 
-```
+```text
 @startuml practice2
 
 '################################
@@ -291,6 +316,7 @@ Foo -> Foo7: To queue
 
 
 <h1 id="aSeq3">シーケンス / シーケンス線の書式</h1>  
+
 * 自分自身へのメッセージ
 * 要求・応答
 * 基本線・点線・断線
@@ -298,7 +324,7 @@ Foo -> Foo7: To queue
 * 線の色付け
 * 縦ラインの色付け・解除
 
-```
+```text
 @startuml practice3
 
 '################################
@@ -391,7 +417,7 @@ end note
 
 <h1 id="aSeq4">応答メッセージを矢印の下に表示する</h1>  
 
-```
+```text
 @startuml practice4
 
 '################################
@@ -425,6 +451,7 @@ Foo1 <- Foo2 : Ack(OK)
 
 
 <h1 id="aSeq5">自動番号振り</h1>  
+
 * 自動番号振り
 * 自動番号振り・開始番号指定
 * 自動番号振り・桁指定
@@ -432,7 +459,7 @@ Foo1 <- Foo2 : Ack(OK)
 * 自動番号の参照
   
 
-```
+```text
 @startuml practice5
 
 '################################
@@ -484,6 +511,7 @@ Foo1 <- Foo2 : Ack(OK) "%autonumber%"
 
 
 <h1 id="aSeq6">条件分岐</h1>  
+
 * 単一if分岐（opt）
 * 複数if分岐（alt）
 * 他シーケンス参照
@@ -497,7 +525,7 @@ Foo1 <- Foo2 : Ack(OK) "%autonumber%"
 * イン・アウト（call文）
   
 
-```
+```text
 @startuml practice6
 
 '################################
@@ -621,6 +649,7 @@ Foo1 <-] : Local Server Request 2
 
 
 <h1 id="aSeq7">テキストボックス</h1>  
+
 * テキスト（左）
 * テキスト相対位置指定
 * テキスト（右）+テキストカラー
@@ -629,7 +658,7 @@ Foo1 <-] : Local Server Request 2
 * 別ラインのテキストを同一位置に並べる
 * ラインを跨るテキスト（ライン指定）
 
-```
+```text
 @startuml practice7
 
 '################################
@@ -703,12 +732,13 @@ end
 
 
 <h1 id="aClass">クラス図</h1>  
+
 * 可視状態
 * オブジェクト宣言
 * オブジェクトの関係性
   
 
-```
+```text
 @startuml practice8
 
 '################################
@@ -827,6 +857,6 @@ ClassA o-- ClassD
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

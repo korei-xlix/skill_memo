@@ -46,7 +46,8 @@ Twitterでは、だいたい1週間前のツイートはweb表示できない。
 
 **使用例**  
 以下のようにすると、2023年3月18～20の @korei_xlix のツイートをダウンロードできる。  
-```
+
+```text
 from:korei_xlix since:2023-03-18 until:2023-03-20  
 
 後ろにタグを付けると、タグ付きでも絞れる  
@@ -79,6 +80,6 @@ Twitter Blueを月払いから、年払いに切り替えるには、一度月�
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

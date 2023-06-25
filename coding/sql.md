@@ -38,25 +38,30 @@
 MySQLの開発ソースコードをクローン化してソースを取得、ビルドします。  
   
 * 1.gitをインストールします。  
-```
+
+```text
 Linuxの場合
 $ sudo yum install git-all
 
 ubuntuの場合
 $ sudo apt-get install git-all
-```
+```text
 Windowsの場合  
     [git for Windows](https://gitforwindows.org/)  
   
+
 * 2.MySQLリポジトリのクローンを設置します。  
-```
+
+```text
 # git clone https://github.com/mysql/mysql-server.git
 
 カレントに設置する場合、最後に . をつけること
 ```
+  
 
 * 3.設置するバージョンのブランチに切り替えます。  
-```
+
+```text
 # git branch -r
 リポジトリのブランチ一覧取得
 
@@ -70,9 +75,11 @@ Windowsの場合
 ソースを取得する
 
 ```
+  
 
 * 4.ソースビルド+インストールします。  
-```
+
+```text
 # cmake ..
 かなり時間がかかります...
 
@@ -84,17 +91,19 @@ Windowsの場合
   
 
 * 5.MySQLを起動します。  
-```
-$ mysqld_safe --datadir='/var/lib/mysql' &
 
-$ ps -ef
+```text
+mysql > mysqld_safe --datadir='/var/lib/mysql' &
+
+mysql > ps -ef
 
 ```
   
 
 * 6.テストログインします。  
   初期はパスワードなし  
-```
+
+```text
 $ mysql -u root
 
 .....
@@ -106,7 +115,8 @@ Bye
   
 
 * 7.rootのパスワードを変更します。  
-```
+
+```text
 $ mysqladmin -u root password '[パスワード]'
 $ mysql -u root -p
 Enter password:
@@ -114,15 +124,17 @@ Enter password:
 MariaDB [(none)]> exit
 Bye
 ```
+  
 
 * 8. 一旦MySQLを終了します。  
   
-	[MySQLの終了](#aEnd)  
+  [[MySQLの終了]](#aEnd)  
   
 
 * 9.設定ファイルのバックアップとエンコードの変更をおこないます。  
   まず、エンコードの確認をします。  
-```
+
+```text
 $ mysql -u root -p
 Enter password:
 
@@ -154,7 +166,8 @@ Db     characterset:    latin1
   
 
 * 10.設定ファイルのテンプレートをバックアップしたあと、設定ファイルを編集します。  
-```
+
+```text
 バックアップ
 $ cp -p /etc/my.cnf.d/server.cnf /etc/my.cnf.d/server.cnf.org
 
@@ -171,7 +184,8 @@ viを抜けます
   
 
 * 11.エンコードが変更されたことを確認します。  
-```
+
+```text
 まずサービス起動
 $ mysqld_safe --datadir='/var/lib/mysql' &
 
@@ -187,9 +201,9 @@ Db     characterset:    utf8
 
 ```
   
-**以上でMySQLを使う準備ができました**
-  
-**データベースとユーザは、以降の操作で作成してください。**  
+
+> 以上でMySQLを使う準備ができました**  
+> データベースとユーザは、以降の操作で作成してください。**  
   
 
 
@@ -197,7 +211,8 @@ Db     characterset:    utf8
 
 
 <h1 id="aStart">MySQLの起動</h1>  
-```
+
+```text
 まずサービスを起動します
 $ mysqld_safe --datadir='/var/lib/mysql' &
 
@@ -212,7 +227,8 @@ $ mysql -h localhost -u samafealdbot -p samafealdbot
 
 
 <h1 id="aEnd">MySQLの終了</h1>  
-```
+
+```text
 $ kill 1772
 
 -bash: kill: (1772) - No such process
@@ -229,7 +245,8 @@ $ kill 1772
 
 <h1 id="aUninstall">MySQLのアンインストール</h1>  
 MySQLのアンインストールは以下のコマンドでおこないます。  
-```
+
+```text
 # make uninstall
 
 ```
@@ -242,17 +259,20 @@ MySQLのアンインストールは以下のコマンドでおこないます。
 <h1 id="aDatabase">データベース操作</h1>  
 
 ## ユーザで使用するデータベース、ユーザ作成
+
 botで使うユーザ、データベースを作成します。  
 
 * 1.rootでログインします。  
-```
-$ mysql -u root -p
+
+```text
+mysql > mysql -u root -p
 
 ```
   
 
 * 2.データベースを作成します。  
-```
+
+```text
 mysql > CREATE DATABASE [データベース名] CHARACTER SET utf8;
 
 例：データベース samafealdbot を作成
@@ -261,8 +281,9 @@ mysql > CREATE DATABASE samafealdbot CHARACTER SET utf8;
 ```
   
 
-* 2.ユーザを作成し、権限を与えます。  
-```
+* 3.ユーザを作成し、権限を与えます。  
+
+```text
 まずユーザを作成します
 mysql > CREATE USER '[ユーザ名]'@'[ホスト名]' IDENTIFIED BY '[パスワード]';
 
@@ -273,8 +294,9 @@ mysql > GRANT CREATE, DROP, DELETE, INSERT, SELECT, UPDATE ON * . * TO '[ユー�
 mysql > GRANT ALL PRIVILEGES ON * . * TO '[ユーザ名]'@'[ホスト名]';
 ```
   
-**例：ユーザ samafeald を作成する**  
-```
+## **例：ユーザ samafeald を作成する**  
+
+```text
 mysql > CREATE USER 'samafealdbot'@'localhost' IDENTIFIED BY '8YALkVbloDOp';
 
 mysql > GRANT CREATE, DROP, DELETE, INSERT, SELECT, UPDATE ON * . * TO 'samafealdbot'@'localhost';
@@ -282,22 +304,27 @@ mysql > GRANT CREATE, DROP, DELETE, INSERT, SELECT, UPDATE ON * . * TO 'samafeal
 ```
   
 * 3.作成したデータベース、ユーザを確認します。  
-```
+
+```text
 データベース一覧を表示
-$ show databases;
+mysql >  show databases;
 
 ユーザ一覧を表示
-$ select host, user from mysql.user;
+mysql >  select host, user from mysql.user;
 
 テーブル一覧を表示
-$ show tables;
+mysql >  show tables;
+
 ```
   
 
 
 ## データベース一覧を表示
-```
-$ show databases;
+
+```text
+
+mysql >  show databases;
+
 ```
   
 
@@ -307,8 +334,10 @@ $ show databases;
 
 <h1 id="aTable">テーブル操作</h1>  
 ## テーブル一覧を表示
-```
-$ show tables;
+
+```text
+mysql >  show tables;
+
 ```
   
 
@@ -317,8 +346,10 @@ $ show tables;
 <h1 id="aUser">ユーザ操作</h1>  
 
 ## ユーザ一覧を表示
-```
-$ select host, user from mysql.user;
+
+```text
+mysql > select host, user from mysql.user;
+
 ```
   
 
@@ -340,9 +371,9 @@ $ select host, user from mysql.user;
 
 
 ***
-[トップへ戻る](/readme.md)  
+[[トップへ戻る]](/readme.md)  
   
-::Project= Skill Document  
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Homepage= https://koreixlix.wixsite.com/profile  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

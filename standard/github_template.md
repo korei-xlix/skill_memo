@@ -1,11 +1,11 @@
 # github readme.md テンプレート / github readme.md template  
 
 **★このリポジトリの改造、流用、配布、クローンは禁止です★**  
-**　　Modification, diversion, distribution, and cloning of this repository are prohibited**  
+    **Modification, diversion, distribution, and cloning of this repository are prohibited**  
   
 
 **★このドキュメントの改造、流用、配布、クローンは禁止です★**  
-**　　Modification, diversion, distribution, and cloning of this document are prohibited**  
+    **Modification, diversion, distribution, and cloning of this document are prohibited**  
   
 
 <h1 id="aHowto">このドキュメントについて / About this document</h1>  
@@ -203,7 +203,7 @@
 * **"一部、配布、クローンを禁止としているドキュメントについては、ご留意、ご準拠"ください。**  
   （フリーウェア規格には準拠するため、"非公式に配布、クローンは認めます。）  
 
-*  リポジトリ使用の許諾、謝辞については不要です。  
+* リポジトリ使用の許諾、謝辞については不要です。  
 
 * 著作権について。
 
@@ -287,30 +287,30 @@
 
 ## メインコンテンツ・readme.md用
 
-```
+```text
 ***
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  
 ```
   
 
 
 ## サブメニュー・readme.mdアンカー付き
 
-```
+```text
 ***
 [[トップへ戻る]](/readme.md)　
 [[サブ1]](/sub1/readme.md) / 
 [[サブ2]](/sub2/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  
 ```
   
 
@@ -320,23 +320,23 @@
 
 ## サブコンテンツ・readme.md用
 
-```
+```text
 ***
-::Game Site= https://galaxy-fleet.koreis-labo.com/  
-::github= https://github.com/korei-xlix/galaxyfleet  
-::Twitter= https://twitter.com/galaxy_fleet  
+::Game Site= [https://galaxy-fleet.koreis-labo.com/](https://galaxy-fleet.koreis-labo.com/)  
+::github= [https://github.com/korei-xlix/galaxyfleet](https://github.com/korei-xlix/galaxyfleet)  
+::Twitter= [https://twitter.com/galaxy_fleet](https://twitter.com/galaxy_fleet)  
   
 ::Deverop= Samafeald (@samafeald)  
-::Twitter= https://twitter.com/samafeald  
+::Twitter= [https://twitter.com/samafeald](https://twitter.com/samafeald)  
   
 
 ***
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  
 ```
   
 
@@ -348,6 +348,6 @@
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

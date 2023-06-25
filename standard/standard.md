@@ -1,7 +1,7 @@
 # Coding Standard　～コーディング規約～
 
 **★このドキュメントの改造、流用、配布、クローンは禁止です★**  
-**　　Modification, diversion, distribution, and cloning of this document are prohibited**  
+    **Modification, diversion, distribution, and cloning of this document are prohibited**  
   
 
 <h1 id="aHowto">このドキュメントについて / About this document</h1>  
@@ -19,7 +19,7 @@ PHPやJavaScriptなど非オブジェクト指向型言語を使用する際、�
 
 * [オブジェクトの参照範囲の明示](#aStandard1)
 
-* クラスの明示](#aStandard2)
+* [クラスの明示](#aStandard2)
 
 * [構造体の明示](#aStandard3)
 
@@ -36,32 +36,33 @@ PHPやJavaScriptなど非オブジェクト指向型言語を使用する際、�
 クラス、関数、変数の一番先頭に「文字」を付加することで、参照の範囲を明示する。  
 更に次の文字は使用するプログラム名ないしクラス名も入れることとする。  
 
-### **C++形式**  
+## **C++形式**  
 
 |接頭文字  |意味  |
 |:--|:--|
-|g					|グローバル参照(grobal、extern)　						|
-|s					|静的参照(static)。静的展開。							|
-|なし（先頭大文字）	|パブリック参照(public)。どのクラスからでも参照可。		|
-|なし（先頭小文字）	|プライベート参照(private)。クラス内のみから参照可。	|
-|p（次の文字は大文字）	|プロテクト参照(protected)。クラス継承を受けるもの。	|
-|__					|コンストラクタやデストラクタなど環境で用意された特殊な関数。ユーザ宣言としない。	|
-|h					|ハンドラ。イベントから参照されるもの(public扱い)。※関数のみに適用。	|
-|w（次の文字は大文字）	|ワーク変数。関数内のみの参照。※変数のみに適用		|
+|g                      |グローバル参照(grobal、extern)　                         |
+|s                      |静的参照(static)。静的展開。                           |
+|なし（先頭大文字）     |パブリック参照(public)。どのクラスからでも参照可。         |
+|なし（先頭小文字）     |プライベート参照(private)。クラス内のみから参照可。        |
+|p（次の文字は大文字）  |プロテクト参照(protected)。クラス継承を受けるもの。        |
+|__                     |コンストラクタやデストラクタなど環境で用意された特殊な関数。ユーザ宣言としない。   |
+|h                      |ハンドラ。イベントから参照されるもの(public扱い)。※関数のみに適用。    |
+|w（次の文字は大文字）      |ワーク変数。関数内のみの参照。※変数のみに適用          |
+  
 
+## **python形式**  
 
-### **python形式**  
 pythonの場合、関数に設けられた参照レベルは少ないので、以下を適用する。
 
 |接頭文字  |意味  |
 |:--|:--|
-|g					|グローバル参照(grobal、extern)			|
-|s					|静的参照(static)。静的展開。			|
-|なし（先頭大文字）	|インスタンス関数。宣言が必要。			|
-|c（次の文字は大文字）	|クラス関数。静的関数となる。 @classmethod（@staticmethodは使わない）	|
-|__（次の文字は小文字）	|プライベート関数。クラス内でのみ参照。									|
-|h					|ハンドラ。イベントから参照されるもの(public扱い)。※関数のみに適用。		|
-|w（次の文字は大文字）	|ワーク変数。関数内のみの参照。※変数のみに適用							|
+|g                      |グローバル参照(grobal、extern)             |
+|s                      |静的参照(static)。静的展開。               |
+|なし（先頭大文字）     |インスタンス関数。宣言が必要。             |
+|c（次の文字は大文字）  |クラス関数。静的関数となる。 @classmethod（@staticmethodは使わない）    |
+|__（次の文字は小文字） |プライベート関数。クラス内でのみ参照。                                  |
+|h                      |ハンドラ。イベントから参照されるもの(public扱い)。※関数のみに適用。    |
+|w（次の文字は大文字）  |ワーク変数。関数内のみの参照。※変数のみに適用                          |
   
 
 
@@ -74,7 +75,7 @@ pythonの場合、関数に設けられた参照レベルは少ないので、�
 
 |接頭文字  |意味  |
 |:--|:--|
-|CLS				|クラス(class)。構造宣言部では、最後尾に _Cls を付加する。		|
+|CLS                |クラス(class)。構造宣言部では、最後尾に _Cls を付加する。      |
   
 
 
@@ -139,6 +140,6 @@ pythonの場合、関数に設けられた参照レベルは少ないので、�
 [[トップへ戻る]](/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
-::github= https://github.com/korei-xlix/  
-::Web= https://website.koreis-labo.com/  
-::Twitter= https://twitter.com/korei_xlix  
+::github= [https://github.com/korei-xlix/](https://github.com/korei-xlix/)  
+::Web= [https://website.koreis-labo.com/](https://website.koreis-labo.com/)  
+::Twitter= [https://twitter.com/korei_xlix](https://twitter.com/korei_xlix)  

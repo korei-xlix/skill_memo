@@ -89,6 +89,8 @@ Java HotSpot(TM) 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 * 6.ワークスペースの設定もしておくといいです。  
   左下の「設定」-「設定」の「ワークスペース」で、検索窓を指定。  
   
+  File.encoding：utf-8　デフォルトのエンコード形式を設定する。  
+  
   editor.mouseWheelZoom：ON　「Ctrl」+マウスホイールで文字の大きさが変更できる。  
   
   editor.renderWhitespace：all　半角スペースを可視化できる。  

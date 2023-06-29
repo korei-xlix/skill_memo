@@ -1,4 +1,7 @@
-# github readme.md テンプレート / github readme.md template  
+# github readme.md テンプレート
+  
+<h1>github readme.md template～</h1>  
+  
 
 **★このリポジトリの改造、流用、配布、クローンは禁止です★**  
     **Modification, diversion, distribution, and cloning of this repository are prohibited**  
@@ -303,8 +306,8 @@
 
 ```text
 ***
-[[トップへ戻る]](/readme.md)　
-[[サブ1]](/sub1/readme.md) / 
+[[トップへ戻る]](/readme.md)　/
+[[サブ1]](/sub1/readme.md) /
 [[サブ2]](/sub2/readme.md)  
   
 ::Admin= Korei (@korei-xlix)  
